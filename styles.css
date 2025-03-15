@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e8f5e9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffd9c0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 0.625rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.625rem 1.25rem;
+    background-color: #ff8c69;
+    border: none;
+    border-radius: 0.3125rem;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    color: #800000;
+    background-color: #ff7f50;
+}
+
+.logo:active {
+    color: #800000;
+    background-color: #ff6347;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.625rem;
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    gap: 1.25rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff8c69;
+}
+
+nav a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff8c69;
+    transition: all 0.3s ease;
+}
+
+nav a:active,
+nav a:focus {
+    color: #333;
+}
+
+.lets-talk-btn, .btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff8c69;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    transition: all 0.3s ease;
+}
+
+.hero {
+    text-align: center;
+    padding: 3.125rem 1.25rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.hero h1:hover {
+    color: #800000;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.875rem;
+}
+
+.hero iframe {
+    margin-bottom: 1.25rem;
+}
+
+.services {
+    padding: 3.125rem 1.25rem;
+    text-align: center;
+    background-color: #ffd9c0;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.services h2:hover {
+    color: #800000;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.service-item {
+    padding: 1.25rem;
+    border: 1px solid #e8f5e9;
+    border-radius: 0.3125rem;
+    background-color: #e8f5e9;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 0.625rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-grid {
+        gap: 0.5rem;
+    }
+}
+
+.portfolio {
+    padding: 3.125rem 1.25rem;
+    text-align: center;
+    background-color: #e8f5e9;
+}
+
+.portfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.portfolio h2:hover {
+    color: #800000;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    height: 12.5rem;
+    border-radius: 0.3125rem;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.3125rem;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 0.625rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        gap: 0.5rem;
+    }
+}
+
+footer {
+    background-color: #ff8c69;
+    color: #fff;
+    padding: 1.25rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin: 0;
+}
